@@ -21,7 +21,7 @@
 + Manual scrolling via arrow buttons
 + Navigation dots are clickable
 
-![Carousel gif](http://g.recordit.co/iD2dh87Yom.gif)
+![Carousel gif](http://g.recordit.co/ZrNTYkpSHU.gif)
 
 ## Stack
 + HTML
