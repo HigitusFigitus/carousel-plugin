@@ -60,7 +60,7 @@ function carouselAdvance(){
 
   $('.carousel').append(newHTML);
 
-  for(i = 0; i < carouselAttributes.totalPanels; i++){
+  for(i = 0; i < carouselAttributes.totalPanels; i += 1){
     $('.carousel-nav').append('<div></div>');
   }
 
