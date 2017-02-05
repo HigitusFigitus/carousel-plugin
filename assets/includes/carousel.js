@@ -20,6 +20,7 @@ function gatherCarouselData(){
     carouselAttributes.panelContent[index] =
     '<div class="carousel-panel" style="background-image:url('+ panel_image +');"></div>';
   });
+  setInterval(automateScroll, 100);
 }
 
 function automateScroll() {
