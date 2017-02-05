@@ -21,6 +21,7 @@ function gatherCarouselData(){
     '<div class="carousel-panel" style="background-image:url('+ panel_image +');"></div>';
   });
   setInterval(automateScroll, 100);
+  carouselAdvance();
 }
 
 function automateScroll() {
