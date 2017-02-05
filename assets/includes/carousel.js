@@ -21,3 +21,20 @@ function gatherCarouselData(){
     '<div class="carousel-panel" style="background-image:url('+ panel_image +');"></div>';
   });
 }
+
+function automateScroll() {
+    if(carouselAttributes.timePassed == carouselAttributes.timeToChange){
+    carouselAttributes.timePassed = 0;
+
+    if(carouselAttributes.autoPlay == true){
+      if(carouselAttributes.currentPanel == carouselAttributes.totalPanels){
+        $('.carousel-nav div:nth-child(1)').trigger('click');
+      } else {
+        $('.carousel-nav div:nth-child('+(carouselAttributes.currentPanel + 1)+')').trigger('click');
+      }
+    }
+
+  } else {
+    carouselAttributes.timePassed += 1;
+  }
+}
