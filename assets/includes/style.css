@@ -51,7 +51,7 @@ body {
 .carousel .carousel-nav {
   position: absolute;
   bottom: 10px;
-  left: 0px;
+  left: 45%;
   width: 100%;
   z-index: 103;
 }
