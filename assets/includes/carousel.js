@@ -3,15 +3,17 @@ var carouselAttributes = {
   currentPanel: 1,
   totalPanels: 0,
   timePassed: 0,
-  timeToChange: 80, // Will be multiplied to 8 seconds
-  duration: 1250, // 1.25 seconds
+  timeToChange: 50,
+  duration: 1250,
   inTransition: false,
   panelContent: Array
 };
 
+
 $(document).ready(function(){
   gatherCarouselData();
 });
+
 
 function gatherCarouselData(){
   $('.carousel-data .carousel-panel').each(function(index){
@@ -24,8 +26,9 @@ function gatherCarouselData(){
   carouselAdvance();
 }
 
+
 function automateScroll() {
-    if(carouselAttributes.timePassed == carouselAttributes.timeToChange){
+  if(carouselAttributes.timePassed == carouselAttributes.timeToChange){
     carouselAttributes.timePassed = 0;
 
     if(carouselAttributes.autoPlay == true){
@@ -41,21 +44,18 @@ function automateScroll() {
   }
 }
 
+
 function carouselAdvance(){
-  carouselMultiPanel();
-}
-
-
-function carouselMultiPanel(){
 
   carouselAttributes.timePassed = 0;
   carouselAttributes.autoPlay = true;
 
-  var newHTML ='<div class="carousel-stage">'+
-    +'<div class="carousel-container_1"></div>'
+  var newHTML =
+      '<div class="carousel-stage">'
+    + '<div class="carousel-container_1"></div>'
     + '<div class="carousel-nav"></div>'
     + '<div class="btn prev"></div>'
-  + '<div class="btn next"></div>'
+    + '<div class="btn next"></div>'
     + '</div>';
 
   $('.carousel').append(newHTML);
@@ -70,7 +70,6 @@ function carouselMultiPanel(){
     carouselAttributes.autoPlay = true;
     carouselAttributes.timePassed = Math.floor(carouselAttributes.timeToChange / 2);
   });
-
 
   $('.carousel .btn').on('click', function(){
     if(!carouselAttributes.inTransition){
@@ -106,5 +105,6 @@ function carouselMultiPanel(){
       });
     }
   });
+
   $('.carousel-nav div:first').trigger('click');
-}
+};
