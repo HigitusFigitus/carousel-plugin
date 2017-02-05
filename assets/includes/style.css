@@ -13,3 +13,94 @@ body {
 .carousel .carousel-data {
   display: none;
 }
+
+.carousel .carousel-stage {
+  height: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .carousel-container_1,
+.carousel .carousel-container_2 {
+  height: inherit;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+}
+
+.carousel .carousel-container_1 {
+  z-index: 101;
+}
+
+.carousel .carousel-container_2 {
+  z-index: 102;
+}
+
+.carousel .carousel-panel {
+  height: inherit;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+  background-size: cover;
+}
+
+.carousel .carousel-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 100%;
+  z-index: 103;
+}
+
+.carousel .carousel-nav div {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+  margin: 0px 8px 0px 8px;
+  cursor: pointer;
+  transition: background-color .4s, border .4s;
+}
+
+.carousel .carousel-nav div:hover {
+  border-color: #fff;
+  background-color: rgba(255,255,255,.2);
+}
+
+.carousel .carousel-nav div.selected {
+  background-color: #fff;
+}
+
+.carousel .btn {
+  width: 39px;
+  height: 39px;
+  background: rgba(255,255,255,.2) no-repeat;
+  background-size: 50px 30px;
+  position: absolute;
+  top: 192px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.5);
+  transition: background-color .4s, border .4s;
+}
+.carousel .btn:hover {
+  border-color: #fff;
+  background-color: rgba(0,0,0,.6);
+}
+.carousel .btn.prev {
+  left: 20px;
+  z-index: 104;
+  background-image: url(../images/arrow_left.svg);
+  background-position: -8px 4px;
+}
+.carousel .btn.next {
+  right: 20px;
+  z-index: 105;
+  background-image: url(../images/arrow_right.svg);
+  background-position: -3px 4px;
+}
