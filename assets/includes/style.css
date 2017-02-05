@@ -1,0 +1,15 @@
+body {
+  margin: 0px;
+  padding: 10px;
+}
+
+.carousel {
+  height: 425px;
+  max-width: 1200px;
+  margin: 0px auto 20px auto;
+  border: 37px solid rgb(211,226,225);
+}
+
+.carousel .carousel-data {
+  display: none;
+}
