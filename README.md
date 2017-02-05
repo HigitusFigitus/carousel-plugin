@@ -1,6 +1,7 @@
 # Carousel jQuery Plugin
 
-> A clean and easy to navigate carousel inspired by material design. The number of images and the autoscroll interval are configurable.
+> A clean and easy to navigate carousel inspired by material design.
+The number of images and the time intervals can be configured.
 
 ## Table of Contents
 
